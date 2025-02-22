@@ -1,10 +1,15 @@
-local damage = 10  -- 플레이어에게 입힐 데미지
+local damage = 20  -- 플레이어에게 입힐 데미지
 local radius = 20  -- 데미지를 입히는 범위 (너비: 20 studs)
-local damageInterval = 2  -- 데미지 주는 간격 (초 단위)
+local damageInterval = 0.5  -- 데미지 주는 간격 (초 단위)
 local damageCooldown = false  -- 데미지 간격을 위한 변수
 
 -- 플레이어가 가까이 왔을 때 데미지를 입히는 함수
 local function applyDamageToPlayer(player)
+    -- 플레이어가 자기 자신이 아닌지 확인
+    if player == game.Players.LocalPlayer then
+        return  -- 자기 자신이면 데미지 입히지 않음
+    end
+    
     -- 플레이어의 Humanoid가 존재할 경우에만 데미지를 입힙니다.
     if player.Character and player.Character:FindFirstChild("Humanoid") then
         local humanoid = player.Character:FindFirstChild("Humanoid")
