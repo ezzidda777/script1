@@ -2,7 +2,7 @@
 local player = game.Players.LocalPlayer
 local radius = 20  -- 데미지를 입히는 범위 (20 studs)
 local damageInterval = 2  -- 데미지 주는 간격
-local damageCooldown = false  -- 데미지 간격을 위한 변수
+local damageCooldown = false  -- 데미지
 
 -- ReplicatedStorage에 RemoteEvent를 생성
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
