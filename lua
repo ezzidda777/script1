@@ -1,4 +1,4 @@
-local damage = 20  -- 플레이어에게 입힐 데미지
+local damage = 20  -- 플레이어에게 입힐 데
 local radius = 20  -- 데미지를 입히는 범위 (너비: 20 studs)
 local damageInterval = 0.5  -- 데미지 주는 간격 (초 단위)
 local damageCooldown = false  -- 데미지 간격을 위한 변수
